@@ -19,7 +19,4 @@ module "aft" {
   account_customizations_repo_branch              = var.account_customizations_repo_branch
   account_provisioning_customizations_repo_name   = var.github_repo_name
   account_provisioning_customizations_repo_branch = var.account_provisioning_customizations_repo_branch
-
-  # Optional Feature Flags
-  aft_feature_cloudtrail_data_events = false # This option, usually required for compliance in highly regulated environments, can have an impact on your costs
 }
