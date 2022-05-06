@@ -11,13 +11,13 @@ module "aft" {
 
   # VCS Vars
   vcs_provider                                    = "github"
-  account_request_repo_name                       = var.github_repo_name
+  account_request_repo_name                       = var.github_customizations_repo_name
   account_request_repo_branch                     = var.account_request_repo_branch
-  global_customizations_repo_name                 = var.github_repo_name
+  global_customizations_repo_name                 = var.github_customizations_repo_name
   global_customizations_repo_branch               = var.global_customizations_repo_branch
-  account_customizations_repo_name                = var.github_repo_name
+  account_customizations_repo_name                = var.github_customizations_repo_name
   account_customizations_repo_branch              = var.account_customizations_repo_branch
-  account_provisioning_customizations_repo_name   = var.github_repo_name
+  account_provisioning_customizations_repo_name   = var.github_customizations_repo_name
   account_provisioning_customizations_repo_branch = var.account_provisioning_customizations_repo_branch
 
   # Optional Feature Flags
