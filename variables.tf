@@ -31,7 +31,6 @@ variable "tf_backend_secondary_region" {
 variable "github_customizations_repo_name" {
   description = "GitHub repository for account provisioning and account updating files"
   type        = string
-  default     = "luigidifraiawork/terraform-aws-control-tower-aft-customizations"
 }
 
 variable "account_request_repo_branch" {
