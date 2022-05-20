@@ -9,6 +9,9 @@ module "aft" {
   ct_home_region              = var.ct_home_region
   tf_backend_secondary_region = var.tf_backend_secondary_region
 
+  # Optional Vars
+  terraform_version = "1.1.9"
+
   # VCS Vars
   vcs_provider                                    = "github"
   account_request_repo_name                       = var.github_customizations_repo_name
