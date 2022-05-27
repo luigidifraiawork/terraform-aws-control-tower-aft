@@ -10,7 +10,7 @@ module "aft" {
   tf_backend_secondary_region = var.tf_backend_secondary_region
 
   # Optional Vars
-  terraform_version = "1.1.9"
+  terraform_version = "1.2.1"
 
   # VCS Vars
   vcs_provider                                    = "github"
