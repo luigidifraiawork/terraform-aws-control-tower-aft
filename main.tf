@@ -1,5 +1,5 @@
 module "aft" {
-  source = "github.com/aws-ia/terraform-aws-control_tower_account_factory?ref=1.3.5"
+  source = "github.com/aws-ia/terraform-aws-control_tower_account_factory?ref=1.4.0"
 
   # Required Vars
   ct_management_account_id    = var.ct_management_account_id
@@ -11,6 +11,9 @@ module "aft" {
 
   # Optional Vars
   terraform_version = "1.2.1"
+
+  # Optional Feature Flags
+  aft_feature_delete_default_vpcs_enabled = var.aft_feature_delete_default_vpcs_enabled
 
   # VCS Vars
   vcs_provider                                    = "github"

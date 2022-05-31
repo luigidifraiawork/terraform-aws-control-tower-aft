@@ -28,6 +28,11 @@ variable "tf_backend_secondary_region" {
   type        = string
 }
 
+variable "aft_feature_delete_default_vpcs_enabled" {
+  description = "Feature flag toggling deletion of default VPCs on/off"
+  type        = bool
+}
+
 variable "github_customizations_repo_name" {
   description = "GitHub repository for account provisioning and account updating files"
   type        = string
