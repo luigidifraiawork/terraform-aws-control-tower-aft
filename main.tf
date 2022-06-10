@@ -1,15 +1,15 @@
 module "aft" {
   source = "github.com/aws-ia/terraform-aws-control_tower_account_factory?ref=1.4.2"
 
-  # AFT Terraform Distribution Vars
-  terraform_version = "1.2.2"
-
   # Required Vars
-  ct_management_account_id    = var.ct_management_account_id
-  log_archive_account_id      = var.log_archive_account_id
-  audit_account_id            = var.audit_account_id
-  aft_management_account_id   = var.aft_management_account_id
-  ct_home_region              = var.ct_home_region
+  ct_management_account_id  = var.ct_management_account_id
+  log_archive_account_id    = var.log_archive_account_id
+  audit_account_id          = var.audit_account_id
+  aft_management_account_id = var.aft_management_account_id
+  ct_home_region            = var.ct_home_region
+
+  # AFT Terraform Distribution Vars
+  terraform_version           = "1.2.2"
   tf_backend_secondary_region = var.tf_backend_secondary_region
 
   # General AFT Vars
