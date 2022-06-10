@@ -1,5 +1,5 @@
 module "aft" {
-  source = "github.com/aws-ia/terraform-aws-control_tower_account_factory?ref=1.4.0"
+  source = "github.com/aws-ia/terraform-aws-control_tower_account_factory?ref=1.4.2"
 
   # Required Vars
   ct_management_account_id    = var.ct_management_account_id
@@ -10,10 +10,11 @@ module "aft" {
   tf_backend_secondary_region = var.tf_backend_secondary_region
 
   # Optional Vars
-  terraform_version = "1.2.1"
+  terraform_version = "1.2.2"
 
   # Optional Feature Flags
   aft_feature_delete_default_vpcs_enabled = var.aft_feature_delete_default_vpcs_enabled
+  aft_vpc_endpoints                       = var.aft_vpc_endpoints
 
   # VCS Vars
   vcs_provider                                    = "github"
@@ -26,3 +27,4 @@ module "aft" {
   account_provisioning_customizations_repo_name   = var.github_customizations_repo_name
   account_provisioning_customizations_repo_branch = var.account_provisioning_customizations_repo_branch
 }
+

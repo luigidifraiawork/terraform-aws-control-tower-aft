@@ -1,3 +1,7 @@
+#########################################
+# Control Tower Core Account Parameters
+#########################################
+
 variable "ct_management_account_id" {
   description = "Control Tower Management Account Id"
   type        = string
@@ -18,20 +22,41 @@ variable "aft_management_account_id" {
   type        = string
 }
 
+#########################################
+# General AFT Vars
+#########################################
+
 variable "ct_home_region" {
   description = "The region from which the AFT module will be executed. This MUST be the same region as Control Tower is deployed."
   type        = string
 }
+
+variable "aft_vpc_endpoints" {
+  description = "Flag turning VPC endpoints on/off for AFT VPC"
+  type        = bool
+}
+
+#########################################
+# AFT Feature Flags
+#########################################
+
+variable "aft_feature_delete_default_vpcs_enabled" {
+  description = "Feature flag toggling deletion of default VPCs on/off"
+  type        = bool
+}
+
+#########################################
+# AFT Terraform Distribution Variables
+#########################################
 
 variable "tf_backend_secondary_region" {
   description = "AFT creates a backend for state tracking for its own state as well as OSS cases. The backend's primary region is the same as the AFT region, but this defines the secondary region to replicate to."
   type        = string
 }
 
-variable "aft_feature_delete_default_vpcs_enabled" {
-  description = "Feature flag toggling deletion of default VPCs on/off"
-  type        = bool
-}
+#########################################
+# AFT Customer VCS Variables
+#########################################
 
 variable "github_customizations_repo_name" {
   description = "GitHub repository for account provisioning and account updating files"
@@ -61,3 +86,4 @@ variable "account_provisioning_customizations_repo_branch" {
   type        = string
   default     = "aft-account-provisioning-customizations"
 }
+
